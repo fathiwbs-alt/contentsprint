@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ContentSprint — Done-For-You Content, Delivered in 48 Hours</title>
+<meta name="description" content="ContentSprint is a done-for-you content studio. Pick a project — SEO articles, email sequence, landing copy, or a research report — and get it delivered in 48 hours. Flat $250, one revision included.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0b10'/%3E%3Cpath d='M22 11.5c-1.2-1.6-3.1-2.5-5.4-2.5-3.6 0-6.1 1.9-6.1 5 0 3 2.2 4.3 5.2 5.1 2.4.7 3.4 1.3 3.4 2.4 0 1.3-1.3 2-3 2-1.9 0-3.6-.9-4.8-2.4l-2.4 2.2c1.5 2.1 4 3.2 7 3.2 4 0 6.7-2 6.7-5.2 0-2.9-2.1-4.3-5.3-5.2-2.3-.6-3.3-1.2-3.3-2.3 0-1.1 1.1-1.8 2.7-1.8 1.5 0 2.9.7 3.9 1.9z' fill='%23ff6a1f'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0a0b10; --card:#10121a; --line:#1e2130; --line2:#2a2e42;
+    --text:#eef0f6; --muted:#9aa2b5; --accent:#ff6a1f; --accent-dim:#ff6a1f22;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  header{padding:28px 0;border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.2px;font-size:18px}
+  .logo .mark{width:30px;height:30px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font:800 15px/1 -apple-system,Segoe UI,Arial;color:#0a0b10}
+  .logo span b{color:var(--accent)}
+  .btn{display:inline-block;background:var(--accent);color:#0a0b10;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:10px;transition:.15s;border:1px solid var(--accent)}
+  .btn:hover{filter:brightness(1.1)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line2)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .hero{padding:84px 0 64px;text-align:center}
+  .pill{display:inline-block;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:6px 14px;margin-bottom:26px;background:var(--accent-dim)}
+  h1{font-size:clamp(30px,5vw,52px);line-height:1.12;letter-spacing:-1.2px;font-weight:800;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .sub{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:0 auto 32px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .tiny{color:var(--muted);font-size:13px;margin-top:18px}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+  h2{font-size:clamp(22px,3.2vw,30px);letter-spacing:-.6px;font-weight:800;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{font-size:17px;margin-bottom:8px;letter-spacing:-.2px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card .tag{display:inline-block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-weight:700}
+  .steps{counter-reset:step}
+  .step{display:flex;gap:18px;padding:18px 0;border-bottom:1px dashed var(--line)}
+  .step:last-child{border-bottom:0}
+  .step .num{flex:0 0 40px;height:40px;border-radius:10px;background:var(--accent-dim);border:1px solid var(--accent);color:var(--accent);font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:16.5px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:14.5px}
+  .price{background:linear-gradient(180deg,var(--card),#0d0f16);border:1px solid var(--line2);border-radius:18px;padding:34px;text-align:center}
+  .price .amount{font-size:52px;font-weight:800;letter-spacing:-2px}
+  .price .amount small{font-size:17px;color:var(--muted);font-weight:600;letter-spacing:0}
+  .price ul{list-style:none;margin:22px auto 28px;max-width:420px;text-align:left}
+  .price li{padding:7px 0 7px 30px;position:relative;color:var(--text);font-size:15px}
+  .price li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+  details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:var(--card)}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";float:right;color:var(--accent);font-weight:800}
+  details[open] summary:after{content:"–"}
+  details p{color:var(--muted);font-size:14.5px;margin-top:10px}
+  footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;text-align:center}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo"><div class="mark">CS</div><span>Content<b>Sprint</b></span></div>
+    <a class="btn ghost" href="https://whop.com/contentsprint/">Open store</a>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <div class="pill">Done-for-you content studio</div>
+  <h1>Your content, <em>fully done</em> for you.</h1>
+  <p class="sub">Pick a project. Get it written, polished, and delivered in 48 hours. Flat $250 — one revision round always included.</p>
+  <div class="cta-row">
+    <a class="btn" href="https://whop.com/contentsprint/">Start your project →</a>
+    <a class="btn ghost" href="#how">How it works</a>
+  </div>
+  <p class="tiny">Delivered via Whop · 48-hour turnaround · One revision included</p>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">What you can pick</div>
+    <h2>Four project types. One flat price.</h2>
+    <div class="grid">
+      <div class="card"><div class="tag">SEO</div><h3>SEO Article Pack</h3><p>3 long-form, researched articles (1,200–1,500 words each) — ready to publish and built around your keywords.</p></div>
+      <div class="card"><div class="tag">Email</div><h3>Email Welcome Sequence</h3><p>5-email onboarding series with subject lines and a sending plan — turn new signups into customers.</p></div>
+      <div class="card"><div class="tag">Copy</div><h3>Landing Page Copy</h3><p>Full landing page copy engineered to convert: hero, benefits, social proof, objections, and CTA.</p></div>
+      <div class="card"><div class="tag">Research</div><h3>Research Report</h3><p>A deep-dive briefing on your niche: market, competitors, audience insights, and content angles you can act on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>From checkout to delivery in three steps.</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>Pick your project</h3><p>Choose one of the four deliverables and check out on Whop — flat $250, one-time.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Share your brief</h3><p>Answer four quick questions in your Whop support chat: project, brand, audience, and goal.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Receive in 48 hours</h3><p>We write, polish, and deliver a branded PDF straight to your chat. One revision round included.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="price">
+      <div class="kicker">Simple pricing</div>
+      <div class="amount">$250 <small>/ one-time</small></div>
+      <ul>
+        <li>Any of the four project types</li>
+        <li>48-hour delivery, tracked in chat</li>
+        <li>One revision round included</li>
+        <li>Polished, branded PDF deliverable</li>
+        <li>Everything handled inside Whop — no calls needed</li>
+      </ul>
+      <a class="btn" href="https://whop.com/contentsprint/">Get started on Whop →</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2>Quick answers.</h2>
+    <details><summary>How is my content delivered?</summary><p>As a polished, branded PDF in your Whop support chat — within 48 hours of your intake answers. You can request one revision round on any draft.</p></details>
+    <details><summary>Do I need a call or meeting?</summary><p>No. Everything happens in the chat. Just answer the four intake questions after checkout and production starts right away.</p></details>
+    <details><summary>What if I'm not happy with something?</summary><p>One revision round is always included with every project. Tell us exactly what to adjust and we'll rework it.</p></details>
+    <details><summary>Who writes the content?</summary><p>Our content team produces every deliverable, with each piece reviewed and polished before it reaches you.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>ContentSprint</strong> — done-for-you content studio.</p>
+    <p style="margin-top:8px">All projects are purchased and delivered through <a href="https://whop.com/contentsprint/">whop.com/contentsprint</a>.</p>
+    <p style="margin-top:14px">© <span id="y"></span> ContentSprint. All rights reserved.</p>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</footer>
+</body>
+</html>
